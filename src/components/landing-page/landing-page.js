@@ -17,7 +17,7 @@ import {_GetLatitudeLongitude} from '../../redux-action/latitudeLongitue-action'
               
                 <div className={styles.pageText}>
                     <h1>Press the button below to check your current weather</h1>
-                    <button onClick= {()=>this.props.history.push("/starredgithubpage")} className={styles.checkWeatherBtn}> Check Weather</button>
+                    <button onClick= {()=>this.props.history.push("/weatherpage")} className={styles.checkWeatherBtn}> Check Weather</button>
                 </div>
                 
              
