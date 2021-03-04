@@ -1,0 +1,40 @@
+.pageBase{
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.robustaLogo{
+    width: 350px;
+}
+
+.pageText{
+   
+    font-size: 11px;
+    margin-top: 80px;
+    font-family: Roboto, sans-serif;
+}
+.checkWeatherBtn{
+    height: 45px;
+    font-size: 15px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    width: 120px; 
+    margin-top: 50px;
+}
+
+@media only screen and (min-width:768px){
+.pageBase{
+    margin-top: 50px;
+}
+.pageText{
+    margin-top: 10px;
+}
+.robustaLogo{
+    width: 70%;
+}
+  
+}
