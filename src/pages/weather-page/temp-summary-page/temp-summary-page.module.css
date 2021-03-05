@@ -1,0 +1,24 @@
+.tempContainer{
+    font-size: 85px;
+    margin: 0px;
+    padding-top: 70px;
+}
+.highlowTempContainer{
+    font-size: 40px;
+}
+
+.summary{
+    font-size: 24px;
+    padding-right: 69px;
+
+} 
+.summaryBase{
+    display: flex;
+    top: 260px;
+    position: absolute;
+    padding-left: 35px;
+}
+.summary2{
+    position: fixed;
+    padding-top: 25px;
+}

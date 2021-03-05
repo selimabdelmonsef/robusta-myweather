@@ -1,0 +1,12 @@
+.backgroundBase{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.componentStyles{
+    position: relative;
+    text-align: right;
+    color: white;
+    padding-top: 100px;
+    padding-right: 45px;
+}

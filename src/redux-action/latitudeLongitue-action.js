@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { useStore } from "react-redux";
+
+export var latitude = null;
 export const _GetLatitudeLongitude = () => (dispatch, data) => {
 
     if (navigator.geolocation) {
@@ -10,8 +14,6 @@ export const _GetLatitudeLongitude = () => (dispatch, data) => {
                 type: "GET_LONGITUDE",
                 data: position.coords.longitude
             });
-          console.log("Latitude is :", position.coords.latitude);
-          console.log("Longitude is :", position.coords.longitude); 
         });
       }
 }

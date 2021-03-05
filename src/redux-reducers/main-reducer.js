@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import LatitudeLongitudeReducer from './latitudeLongitue-reducer';
+import WeatherDataReducer from './weatherData-reducer'
 
 const rootReducer = combineReducers({
-
-
-    LatitudeLongitudeReducer
+    LatitudeLongitudeReducer,
+    WeatherDataReducer
 });
 
 export const MainReducerActionType = {

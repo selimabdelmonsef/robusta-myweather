@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import landingPage from './components/landing-page/landing-page';
-import weatherPage from './components/weather-page/weather-page'
+import landingPage from './pages/landing-page/landing-page';
+import weatherComponent from './components/weather-component/weather-component'
 
 export default class App extends React.Component {
   render() {
@@ -9,7 +9,7 @@ export default class App extends React.Component {
       <Router>
         <Switch>
           <Route path="/" exact component={landingPage} />
-          <Route path="/weatherpage" component={weatherPage} />
+          <Route path="/weatherpage" component={weatherComponent} />
         </Switch>
       </Router >
 
