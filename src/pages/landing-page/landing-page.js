@@ -2,26 +2,28 @@ import React from 'react';
 import styles from './landing-page.module.css'
 import robustaLogo from '../../images/robustaLogo.png'
 import { connect } from "react-redux";
-import {_GetLatitudeLongitude} from '../../redux-action/latitudeLongitue-action'
+import { _GetLatitudeLongitude } from '../../redux-action/latitudeLongitue-action'
+import { _GetWeatherData } from '../../redux-action/weatherData-action'
 
- class landingPage extends React.Component {
+class landingPage extends React.Component {
 
-    componentDidMount(){
-     this.props.LatitudeLongitude();
+    componentDidMount() {
+        this.props.LatitudeLongitude();
+        this.props.GetWeatherData();
     }
     render() {
         return (
             <div className={styles.pageBase}>
-               
+
                 <img className={styles.robustaLogo} src={robustaLogo} alt="" />
-              
+
                 <div className={styles.pageText}>
                     <h1>Press the button below to check your current weather</h1>
-                    <button onClick= {()=>this.props.history.push("/weatherpage")} className={styles.checkWeatherBtn}> Check Weather</button>
+                    <button onClick={() => this.props.history.push("/weatherpage")} className={styles.checkWeatherBtn}> Check Weather</button>
                 </div>
-                
-             
-             
+
+
+
             </div>
         )
     }
@@ -38,6 +40,9 @@ const mapDisaptchToProps = (dispatch) => {
     return {
         LatitudeLongitude: (data, onSucess) => {
             dispatch(_GetLatitudeLongitude(data, onSucess));
+        },
+        GetWeatherData: (data, onSucess) => {
+            dispatch(_GetWeatherData(data, onSucess));
         },
     };
 };
