@@ -19,7 +19,7 @@ class SwiperSliderComponent extends React.Component {
                     {this.props.data?.twentyFourSeventTemp.map((element,index) => {
                         if(index<=24) return <SwiperSlide >
                             <div>
-                            {this.props.data.hourlyTimeStampArr[index]}:00
+                            {this.props.data?.hourlyTimeStampArr[index]}:00
                             </div>
                             <img className={styles.sunnyLogo} src={sunny} alt="" />
                             {this.props.fahrenheit ? 
