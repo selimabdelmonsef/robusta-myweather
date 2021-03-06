@@ -8,6 +8,10 @@ import { _GetFahrenheit, _GetCelcius } from '../../../redux-action/fahrenheit-ce
 class TempSummaryPage extends React.Component {
     constructor(props) {
         super(props);
+        this.state={
+            celciusBtn: false,
+            fahrenheitBtn:true
+        }
        
     }
 
@@ -41,6 +45,20 @@ class TempSummaryPage extends React.Component {
         var fullYear = today.getFullYear();
         return fullYear;
     }
+    getFahrenheit(){
+        this.props.GetFahrenheit();
+        this.setState({
+            fahrenheitBtn:true,
+            celciusBtn:false
+        })
+    }
+    getCelcius(){
+        this.props.GetCelcius();
+        this.setState({
+            fahrenheitBtn:false,
+            celciusBtn:true
+        })
+    }
     render() {
         return (
 
@@ -48,8 +66,10 @@ class TempSummaryPage extends React.Component {
 
 
             <div>
-                <button onClick={() => this.props.GetFahrenheit()}>f</button>
-                <button onClick={() => this.props.GetCelcius()}>c</button>
+                
+                <button className={styles.fahCelciusBtn} onClick={() => this.getFahrenheit()} disabled={this.state.fahrenheitBtn}>F</button>
+                <button className={styles.fahCelciusBtn} onClick={() => this.getCelcius()} disabled={this.state.celciusBtn}>C</button>
+               
                 {this.props?.fahrenheit ?
 
                     <div>

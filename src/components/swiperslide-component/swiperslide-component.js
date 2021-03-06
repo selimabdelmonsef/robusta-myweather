@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import celcius from '../../utils/fahrenheit-to-celcius';
 import { _GetFahrenheit, _GetCelcius } from '../../redux-action/fahrenheit-celcius-action';
+import sunny from '../../images/sunny.png'
+import styles from './swiperslide-component.module.css'
 
 class SwiperSliderComponent extends React.Component {
 
@@ -14,9 +16,19 @@ class SwiperSliderComponent extends React.Component {
                     spaceBetween={5}
                     slidesPerView={6}
                 >
-                    {this.props.data?.twentyFourSeventTemp.map((element) => {
-                        return <SwiperSlide >
-                            {this.props.fahrenheit ? <div>{element}&#176;</div> : <div>{celcius(element).toFixed()}&#176;</div>}
+                    {this.props.data?.twentyFourSeventTemp.map((element,index) => {
+                        if(index<=24) return <SwiperSlide >
+                            <div>
+                            {this.props.data.hourlyTimeStampArr[index]}:00
+                            </div>
+                            <img className={styles.sunnyLogo} src={sunny} alt="" />
+                            {this.props.fahrenheit ? 
+                            <div>
+                                
+                                {element}&#176;
+                                </div> 
+                                
+                            : <div>{celcius(element).toFixed()}&#176;</div>}
                         </SwiperSlide>
                     })}
                 </Swiper>
