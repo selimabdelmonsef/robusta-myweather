@@ -7,10 +7,6 @@ import { _GetWeatherData } from '../../redux-action/weatherData-action'
 
 class landingPage extends React.Component {
 
-    componentDidMount() {
-        this.props.LatitudeLongitude();
-        this.props.GetWeatherData();
-    }
     render() {
         return (
             <div className={styles.pageBase}>

@@ -2,9 +2,10 @@ import React from 'react'
 import { _GetWeatherData } from '../../../redux-action/weatherData-action';
 import { connect } from "react-redux";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import styles from './TwentyFourSevenTemp.module.css';
+import styles from './TwentyFourSevenTemp-page.module.css';
 import 'swiper/swiper-bundle.css';
 import SwiperSliderComponent from '../../../components/swiperslide-component/swiperslide-component'
+import celcius from '../../../utils/fahrenheit-to-celcius'
 
 class TwentyFourSeven extends React.Component {
 
@@ -15,7 +16,7 @@ class TwentyFourSeven extends React.Component {
     <SwiperSliderComponent></SwiperSliderComponent>
             </div>
 
-        )
+        ) 
     }
 
 

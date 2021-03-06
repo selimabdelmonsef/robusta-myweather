@@ -3,7 +3,7 @@ import { getLongitude } from '../utils/getLongitude'
 import { getLatitude } from '../utils/getLatitude'
 import Axios from 'axios'
 import { getDefaultNormalizer } from '@testing-library/react';
-import TwentyFourSevenTemp from '../pages/weather-page/TwentyFourSevenTemp/TwentyFourSevenTemp';
+import TwentyFourSevenTemp from '../pages/weather-page/TwentyFourSevenTemp-page/TwentyFourSevenTemp-page';
 
 let datas = [];
 let apparentTemperatureHigh = null;
@@ -42,8 +42,8 @@ export const _GetWeatherData = () => (dispatch, data) => {
                 data: datas
             });
         })
+        
     }, 2000);
-
 }
 
 
