@@ -1,22 +1,30 @@
 import React from 'react'
 import { _GetWeatherData } from '../../../redux-action/weatherData-action';
-import { connect } from "react-redux"; 
+import { connect } from "react-redux";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import styles from './TwentyFourSevenTemp.module.css';
+import 'swiper/swiper-bundle.css';
+import SwiperSliderComponent from '../../../components/swiperslide-component/swiperslide-component'
 
-class TwentyFourSeven extends React.Component{
+class TwentyFourSeven extends React.Component {
 
-render(){
-    return(
-        <div>TwentyFOURSEVEN</div>
-    )
-}
 
-    
+    render() {
+        return (
+<div >
+    <SwiperSliderComponent></SwiperSliderComponent>
+            </div>
+
+        )
+    }
+
+
 }
 
 const mapStateToProps = (state) => {
-    return { 
+    return {
         data: state.WeatherDataReducer.data
-    }; 
+    };
 };
 
 const mapDisaptchToProps = (dispatch) => {
@@ -27,4 +35,4 @@ const mapDisaptchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps, mapDisaptchToProps)(TwentyFourSeven); 
+export default connect(mapStateToProps, mapDisaptchToProps)(TwentyFourSeven);  

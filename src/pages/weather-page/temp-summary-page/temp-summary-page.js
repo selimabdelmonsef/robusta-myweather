@@ -35,21 +35,21 @@ class TempSummaryPage extends React.Component {
 
             <div >
                 <div>
-                    {this.props.data.map((element) => {
-                        return <div><div classname={styles.summaryTemp}>
+                  
+                         <div><div classname={styles.summaryTemp}>
 
-                            <h1 className={styles.tempContainer}>{element.apparentTemperature.toFixed()}&#176;</h1>
-                            <span className={styles.highlowTempContainer}>{element.highTemp.toFixed()}&#176;/{element.lowTemp.toFixed()}&#176;</span>
-                            <h1 className={styles.summary}>{element.summary}</h1>
+                            <h1 className={styles.tempContainer}>{this.props.data.apparentTemperature.toFixed()}&#176;</h1>
+                            <span className={styles.highlowTempContainer}>{this.props.data.highTemp.toFixed()}&#176;/{this.props.data.lowTemp.toFixed()}&#176;</span>
+                            <h1 className={styles.summary}>{this.props.data.summary}</h1>
                         </div>
                             <div className={styles.summaryBase}>
 
                                 {this.getWeekDayName()}  {this.getDay()}, {this.getFullYear()}
-                                <h1 className={styles.summary2}>{element.summary}</h1>
+                                <h1 className={styles.summary2}>{this.props.data.summary}</h1>
                             </div>
                         </div>
 
-                    })}
+                    
 
 
                 </div>

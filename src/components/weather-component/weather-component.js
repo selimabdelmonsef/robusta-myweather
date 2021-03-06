@@ -10,9 +10,10 @@ export default class weatherComponent extends React.Component {
             <div>
                 <div><img className={styles.backgroundBase} src={backgroundImage} alt="" /></div>
 
-                <div className={styles.componentStyles}><TempSummaryPage /></div>
-
-                <div><TwentyFourSeven /></div>
+                <div className={styles.componentStyles}>
+                    <TempSummaryPage />
+                    <TwentyFourSeven/> 
+                    </div>
             </div>
         )
     }
