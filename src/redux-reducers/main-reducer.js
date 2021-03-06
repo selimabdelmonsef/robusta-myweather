@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import LatitudeLongitudeReducer from './latitudeLongitue-reducer';
-import WeatherDataReducer from './weatherData-reducer'
+import WeatherDataReducer from './weatherData-reducer';
+import FahrenHeitCelciusReducer from '../redux-reducers/fahrhenheit-celcius-reducer';
 
 const rootReducer = combineReducers({
     LatitudeLongitudeReducer,
-    WeatherDataReducer
+    WeatherDataReducer,
+    FahrenHeitCelciusReducer
 });
 
 export const MainReducerActionType = {
